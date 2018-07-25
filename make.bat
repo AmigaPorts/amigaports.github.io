@@ -26,14 +26,8 @@ if errorlevel 9009 (
 	exit /b 1
 )
 
-del /F /S /Q _static\*
-del /F /S /Q _sources\*
-rmdir /S /Q _static
-rmdir /S /Q _sources
 %SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS%
-move build\html\* .
-move build\html\_static .
-move build\html\_sources .
+xcopy /E /Y build\html\* .
 
 goto end
 

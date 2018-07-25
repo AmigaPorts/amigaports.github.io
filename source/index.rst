@@ -11,14 +11,9 @@ libraries, hardware, et al. for Amiga based systems like AmigaOS 3.x/4.x,
 WarpOS, MorphOS and AROS.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+    :hidden:
+    :maxdepth: 2
+    :caption: Contents:
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+    hardware/index
+    software/index
