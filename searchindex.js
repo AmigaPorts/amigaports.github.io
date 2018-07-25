@@ -1,0 +1,1 @@
+Search.setIndex({docnames:["index"],envversion:52,filenames:["index.rst"],objects:{},objnames:{},objtypes:{},terms:{amiga:0,amigao:0,app:0,aro:0,base:0,collect:0,develop:0,driver:0,hardwar:0,index:0,librari:0,like:0,modul:0,morpho:0,page:0,port:0,project:0,search:0,system:0,warpo:0},titles:["Welcome to AmigaDev!"],titleterms:{amigadev:0,indic:0,tabl:0,welcom:0}})
