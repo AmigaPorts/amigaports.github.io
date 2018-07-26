@@ -1,7 +1,7 @@
 .. AmigaDev documentation master file, created by
-   sphinx-quickstart on Wed Jul 25 14:36:23 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+  sphinx-quickstart on Wed Jul 25 14:36:23 2018.
+  You can adapt this file completely to your liking, but it should at least
+  contain the root `toctree` directive.
 
 Welcome to AmigaDev!
 ====================================
@@ -11,9 +11,9 @@ libraries, hardware, et al. for Amiga based systems like AmigaOS 3.x/4.x,
 WarpOS, MorphOS and AROS.
 
 .. toctree::
-    :hidden:
-    :maxdepth: 2
-    :caption: Contents:
+  :hidden:
+  :maxdepth: 2
+  :caption: Contents:
 
-    hardware/index
-    software/index
+  hardware/index
+  software/index
