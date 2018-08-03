@@ -26,12 +26,12 @@ The following list was composed for A500 rev.6a but works also for rev.8a1.
 On some rev.8a1 boards C401 and C402 are 1000µF.
 
 ====  ===========  =======  =======   ====================  =====
-PCB#  Capacitance  Voltage  HxøD      Original caps         Type
+PCB#  Capacitance  Voltage  HxøD      Original caps         Notes
 ====  ===========  =======  =======   ====================  =====
 C821  47µF         16VDC    11x5mm    SHOEI M85°C 948
 C822  47µF         16VDC    11x5mm    SHOEI M85°C 948
-C812  100µF        16VDC    11x5mm    ELNA RE2 CE85°C 8905
 C811  100µF        16VDC    11x6mm    SHOEI M85°C 918
+C812  100µF        16VDC    11x5mm    ELNA RE2 CE85°C 8905
 C813  100µF        16VDC    11x6mm    SHOEI M85°C 918
 C814  100µF        16VDC    11x6mm    SHOEI M85°C 918
 C815  100µF        16VDC    11x6mm    SHOEI M85°C 918
@@ -39,11 +39,12 @@ C816  100µF        16VDC    11x6mm    SHOEI M85°C 918
 C307  470µF        16VDC    12x10mm   SHOEI M85°C 948
 C303  22µF         35VDC    11x5mm    ELNA RE2 CE85°C 8914
 C304  22µF         35VDC    11x5mm    ELNA RE2 CE85°C 8914
-C324  22µF         35VDC    11x5mm    SHOEI M85°C 918
-C334  22µF         35VDC    11x5mm    SHOEI M85°C 918
+C324  22µF         35VDC    11x5mm    SHOEI M85°C 918       Audio
+C334  22µF         35VDC    11x5mm    SHOEI M85°C 918       Audio
 C306  10µF         35VDC    11x5mm    NICHICON 85°C M8813.
 C712  10µF         35VDC    11x5mm    NICHICON 85°C M8813.
-C401  3300µF       10VDC    24x13mm   SHOEI M85°C 8d8       PWR
-C402  3300µF       10VDC    24x13mm   SHOEI M85°C 8d8       PWR
+C401  3300µF       10VDC    24x13mm   SHOEI M85°C 8d8
+C402  3300µF       10VDC    24x13mm   SHOEI M85°C 8d8
 ====  ===========  =======  =======   ====================  =====
 
+.. Source: http://www.amiga.org/forums/showthread.php?t=64983
