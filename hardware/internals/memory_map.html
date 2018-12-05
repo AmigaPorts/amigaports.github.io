@@ -1,0 +1,501 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Memory map &mdash; AmigaDev  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Software" href="../../software/index.html" />
+    <link rel="prev" title="Capacitor replacement" href="../maintenance/caps.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> AmigaDev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Hardware</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#maintenance">Maintenance</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#internals">Internals</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Memory map</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bit-address-space">16-bit address space</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">32-bit address space</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#special-addresses">Special addresses</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../software/index.html">Software</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AmigaDev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Hardware</a> &raquo;</li>
+        
+      <li>Memory map</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/hardware/internals/memory_map.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="memory-map">
+<h1>Memory map<a class="headerlink" href="#memory-map" title="Permalink to this headline">¶</a></h1>
+<p>Note that various modifications and third party hardware can change the details
+of this map, particularly those expansions that add additional addressing
+capabilities, e.g. 32-bit accelerators in A1200s, 2MB chip RAM modifications
+in A500s etc.</p>
+<div class="section" id="bit-address-space">
+<h2>16-bit address space<a class="headerlink" href="#bit-address-space" title="Permalink to this headline">¶</a></h2>
+<p>Note: Models that are based on the same map are not listed, e.g. CDTV is based
+on A500 architecture, and the A1500 &amp; A2500 are variations on the A2000.
+Significant differences for those models are specified in brackets.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="6%" />
+<col width="8%" />
+<col width="14%" />
+<col width="15%" />
+<col width="9%" />
+<col width="8%" />
+<col width="7%" />
+<col width="0%" />
+<col width="0%" />
+<col width="8%" />
+<col width="0%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Address Range</th>
+<th class="head">Size</th>
+<th class="head">Category</th>
+<th class="head">A1000</th>
+<th class="head">A500 / 2000</th>
+<th class="head">A500+</th>
+<th class="head">A600</th>
+<th class="head" colspan="3">A1200</th>
+<th class="head" colspan="2">A3000</th>
+<th class="head">A4000</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>000000-03FFFF</td>
+<td>256KB</td>
+<td rowspan="4">Chip RAM</td>
+<td colspan="10">First 256KB of chip RAM</td>
+</tr>
+<tr class="row-odd"><td>040000-07FFFF</td>
+<td>256KB</td>
+<td>256KB chip RAM
+expansion card</td>
+<td colspan="9">Second 256KB of chip RAM (to 512KB)</td>
+</tr>
+<tr class="row-even"><td>080000-0FFFFF</td>
+<td>512KB</td>
+<td>Reserved</td>
+<td>512KB chip RAM
+expansion card
+(A500 trapdoor)</td>
+<td colspan="8">Second 512KB of chip RAM (to 1MB)</td>
+</tr>
+<tr class="row-odd"><td>100000-1FFFFF</td>
+<td>1MB</td>
+<td>Reserved</td>
+<td colspan="3">1MB chip RAM expansion card</td>
+<td colspan="6">Second 1MB of chip RAM (to 2MB)</td>
+</tr>
+<tr class="row-even"><td>200000-5FFFFF</td>
+<td>4MB</td>
+<td rowspan="2">Zorro-II
+space</td>
+<td colspan="10">First 4 MB Auto-config space / Fast RAM</td>
+</tr>
+<tr class="row-odd"><td>600000-9FFFFF</td>
+<td>4MB</td>
+<td colspan="3">Second 4 MB Auto-config space / Fast RAM</td>
+<td colspan="2">PCMCIA memory
+card / Fast RAM</td>
+<td colspan="5">Second 4 MB Auto-config
+Auto-config space /
+Fast RAM</td>
+</tr>
+<tr class="row-even"><td>A00000-A7FFFF</td>
+<td>512KB</td>
+<td rowspan="2">Reserved</td>
+<td colspan="3">Reserved</td>
+<td colspan="2">PCMCIA control
+registers</td>
+<td colspan="5">Reserved</td>
+</tr>
+<tr class="row-odd"><td>A80000-BEFFFF</td>
+<td>1472KB</td>
+<td colspan="10">Reserved</td>
+</tr>
+<tr class="row-even"><td>BF0000-BFFFFF</td>
+<td>64KB</td>
+<td>CIAs</td>
+<td colspan="10">8520 CIAs and timers</td>
+</tr>
+<tr class="row-odd"><td>C00000-C7FFFF</td>
+<td>512KB</td>
+<td rowspan="3">Slow RAM</td>
+<td rowspan="2">Reserved</td>
+<td colspan="2">Slow RAM</td>
+<td colspan="5" rowspan="2">Reserved</td>
+<td colspan="2" rowspan="2">Chip register
+shadow</td>
+</tr>
+<tr class="row-even"><td>C80000-CFFFFF</td>
+<td>512KB</td>
+<td colspan="2" rowspan="2">Reserved for slow RAM</td>
+</tr>
+<tr class="row-odd"><td>D00000-D7FFFF</td>
+<td>512KB</td>
+<td>&#160;</td>
+<td colspan="7">Reserved</td>
+</tr>
+<tr class="row-even"><td>D80000-D8FFFF</td>
+<td>64KB</td>
+<td rowspan="3">Periph</td>
+<td colspan="3" rowspan="3">Reserved</td>
+<td colspan="3">Clock Port
+(SPARE_CS)</td>
+<td colspan="4" rowspan="3">Reserved</td>
+</tr>
+<tr class="row-odd"><td>D90000-D9FFFF</td>
+<td>64KB</td>
+<td colspan="3">Reserved (NET_CS)</td>
+</tr>
+<tr class="row-even"><td>DA0000-DBFFFF</td>
+<td>128KB</td>
+<td colspan="3">IDE controller</td>
+</tr>
+<tr class="row-odd"><td>DC0000-DCFFFF</td>
+<td>64KB</td>
+<td>RTC</td>
+<td colspan="10">Real time clock (RTC)</td>
+</tr>
+<tr class="row-even"><td>DD0000-DD0FFF</td>
+<td>4KB</td>
+<td rowspan="3">Storage</td>
+<td colspan="6" rowspan="3">Reserved</td>
+<td colspan="3" rowspan="3">SCSI
+controller</td>
+<td>SCSI contoller</td>
+</tr>
+<tr class="row-odd"><td>DD1000-DD3FFF</td>
+<td>12KB</td>
+<td>IDE controller</td>
+</tr>
+<tr class="row-even"><td>DD4000-DDFFFF</td>
+<td>48KB</td>
+<td>Reserved</td>
+</tr>
+<tr class="row-odd"><td>DE0000-DEFFFF</td>
+<td>64KB</td>
+<td rowspan="5">Reserved</td>
+<td colspan="10">Mainboard resources</td>
+</tr>
+<tr class="row-even"><td>DF0000-DFFFFF</td>
+<td>64KB</td>
+<td colspan="10">Custom chip registers</td>
+</tr>
+<tr class="row-odd"><td>E00000-E7FFFF</td>
+<td>512KB</td>
+<td colspan="10">Reserved</td>
+</tr>
+<tr class="row-even"><td>E80000-E8FFFF</td>
+<td>64KB</td>
+<td colspan="10">Auto-config space. Boards appear here before the system relocates them to their
+final address.</td>
+</tr>
+<tr class="row-odd"><td>E90000-EFFFFF</td>
+<td>448KB</td>
+<td colspan="10">Secondary auto-config space (usually 64K I/O boards)</td>
+</tr>
+<tr class="row-even"><td>F00000-F7FFFF</td>
+<td>512KB</td>
+<td rowspan="4">ROM</td>
+<td>Reserved</td>
+<td>Extended ROM
+(CDTV)</td>
+<td>Reserved</td>
+<td colspan="3">Flash ROM /
+Ext. ROM (CD32)</td>
+<td colspan="4">Diagnostic ROM</td>
+</tr>
+<tr class="row-odd"><td>F80000-FBFFFF</td>
+<td>256KB</td>
+<td colspan="2">Reserved</td>
+<td colspan="8">System ROM</td>
+</tr>
+<tr class="row-even"><td rowspan="2">FC0000-FFFFFF</td>
+<td rowspan="2">256KB</td>
+<td colspan="2" rowspan="2">System ROM</td>
+<td colspan="8" rowspan="2">&#160;</td>
+</tr>
+<tr class="row-odd"></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id1">
+<h2>32-bit address space<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="21%" />
+<col width="13%" />
+<col width="13%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Address Range</th>
+<th class="head">Size</th>
+<th class="head">Category</th>
+<th class="head">A1200</th>
+<th class="head">A3000</th>
+<th class="head">A4000</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>01000000-03FFFFFF</td>
+<td>48MB</td>
+<td>Reserved</td>
+<td rowspan="8">N/A</td>
+<td colspan="2">Reserved</td>
+</tr>
+<tr class="row-odd"><td>04000000-06FFFFFF</td>
+<td>48MB</td>
+<td rowspan="3">Fast RAM</td>
+<td colspan="2">Reserved for motherboard
+RAM expansion</td>
+</tr>
+<tr class="row-even"><td>07000000-07FFFFFF</td>
+<td>16MB</td>
+<td colspan="2">Motherboard RAM</td>
+</tr>
+<tr class="row-odd"><td>08000000-0FFFFFFF</td>
+<td>128MB</td>
+<td colspan="2">CPU slot expansion</td>
+</tr>
+<tr class="row-even"><td>10000000-7FFFFFFF</td>
+<td>1792MB</td>
+<td>Zorro-III space</td>
+<td colspan="2">Zorro-III expansion
+space</td>
+</tr>
+<tr class="row-odd"><td>80000000-FEFFFFFF</td>
+<td>2032MB</td>
+<td rowspan="3">Reserved</td>
+<td colspan="2">Reserved</td>
+</tr>
+<tr class="row-even"><td>FF000000-FF00FFFF</td>
+<td>64KB</td>
+<td colspan="2">Zorro-III config space</td>
+</tr>
+<tr class="row-odd"><td>FF010000-FFFFFFFF</td>
+<td>16320KB</td>
+<td colspan="2">Reserved</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="special-addresses">
+<h2>Special addresses<a class="headerlink" href="#special-addresses" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>000000-000100 - MC680x0 Exception Vector Assignment table  (if VBR=0)</li>
+<li>000004 - Exec base (pointer to exec.library jumptable)</li>
+<li>DE1000 - Gayle ID register</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../software/index.html" class="btn btn-neutral float-right" title="Software" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../maintenance/caps.html" class="btn btn-neutral" title="Capacitor replacement" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AmigaDev.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
